@@ -1,18 +1,10 @@
 # copyright: 2018, The Authors
 
-title "sample section"
+title 'Apache Controls'
 
-# you can also use plain tests
-describe file("/tmp") do
-  it { should be_directory }
-end
+include_controls 'apache-baseline'
 
-# you add controls here
-control "tmp-1.0" do                        # A unique ID for this control
-  impact 0.7                                # The criticality, if this control fails.
-  title "Create /tmp directory"             # A human-readable title
-  desc "An optional description..."
-  describe file("/tmp") do                  # The actual test
-    it { should be_directory }
-  end
-end
+# include_controls 'cis-centos7-level1-server' do
+#   require_control 'xccdf_org.cisecurity.benchmarks_rule_1.1.16_Ensure_nosuid_option_set_on_devshm_partition'
+#   #skip_control 'xccdf_org.cisecurity.benchmarks_rule_1.1.14_Ensure_nodev_option_set_on_home_partition'
+# end

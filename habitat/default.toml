@@ -1,0 +1,13 @@
+interval = 10800
+splay = 300
+splay_first_run = 0
+
+[chef_license]
+acceptance = "accept-no-persist"
+
+[automate]
+enable = true
+environment = "linux"
+server_url = "https://192.168.42.106"
+token = "59G_9y8pdilHU9rkBKElTAGPP1A="
+user = "admin"
